@@ -4,11 +4,19 @@ body {
    
     color: #666;
 }
+#btnup{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f25454;
+    display: none;
+}
 h1 , h2, h3 ,h4,h5,h6 {
     color: #282828;
     font-family: 'Poppins', sans-serif;
 
 }
+
 h2 {
    
     font-size:3rem !important;
@@ -61,6 +69,11 @@ transition: all .5s;}
 }
 
 /*navbar section*/
+#navbar{
+    background-color: transparent;
+    transition: background-color  1s;
+
+}
 nav
  {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -78,81 +91,52 @@ nav a{
         font-size:1rem ;
     }
 
-nav a:hover {
-    color: #f25454;
+     .navbar-nav .nav-link:hover {
+    color: #f25454 !important;
 
 }
  nav .active{
-     color: #f25454;
+     color: #f25454 !important;
     }
 
  /*header section*/
- header{
-        height: 100vh;
-        
-    }
+ .carousel-item {
+     height: 100vh;
+ }
  header h1 {
         font-size: 4.5rem;
         color: white;
         font-family: "Poppins", sans-serif;
         font-weight: 900;
+        position: absolute;
+top: 50%;
+left: 30%;
+width: 40%;
+height: 50%;
+
 
     }
- header .animation-background
-    {
-    width: 100%;
-     height: 100%;
+ 
 
-    }
-    .carousel-item {
-        animation-duration: 6s ;
-        animation-timing-function: linear;
-    }
-.carousel-inner {
-        position: relative;
-     top: 0;
-     left: 0;
-     bottom:0;
-     right: 0;
-     z-index: 11;
-
-       ;}
-
-.animation-background::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/slideshow-1.jpg");
-    background-size: cover;
-     background-position: center center;
-     animation: slider  ;
-     animation-iteration-count:infinite ;
-     animation-duration: 15s;
-     animation-direction:normal;
-     animation-timing-function:linear;
-     z-index: -1;
-}
-.animation-background .animated-btn a{
+.animated-btn a{
   padding: 5px;
     border-radius: 50%;
     position: absolute;
     top:0;
     left:10px;
    background-color: white;
-   z-index: 1;
+   z-index: 15555555555;
     animation: moving 2s ease-in .5s infinite normal;
     transition: all .5s;
 }
 .animated-btn  {
+    position: absolute;
     border: solid 1px white;
     padding: 20px 15px;
     border-radius: 15px;
-    position: relative;;
     top: 90%;
     right:50%;
+    z-index: 2525252525;
     height: 50px;
    transition: all .5;}
 .animated-btn:hover 
@@ -175,79 +159,41 @@ opacity: 1;
         opacity: 0;
     }
 }
-@keyframes slider {
-    0%{ 
-        background-image: url("../images/slideshow-1.jpg");
-        background-size: cover;
-         background-position: center center;  opacity: 1; 
-         
-        }
-  
-  30%{ background-image: url("../images/slideshow-1.jpg");
-    background-size: cover;
-     background-position: center center;  opacity: 1;
-      
 
-  }
-
-
-  33.5% {
-    background-image: url("../images/slideshow-2.jpg");
-    background-size: cover;
-    background-position: center center;opacity: 1;
-
-  }
-  
-  
-  65%{
-    background-image: url("../images/slideshow-2.jpg");
-    background-size: cover;
-     background-position: center center;opacity: 1;
-  }
-
-  70%{  background-image: url("../images/slideshow-3.jpg");
-    background-size: cover;
-     background-position: center center;opacity: 1;}
-  95%{
-    background-image: url("../images/slideshow-3.jpg");
-    background-size: cover;
-     background-position: center center;opacity: 1;
-
-  
-}}
 
 .arrows{
-    top:30%;
+    top:50%;
     left: 0;
-    border: 1px solid white;
+    border: 1px solid #ffffff;
     transition:all 0.5s;
-    width: 60px;
-    height: 120px;
+    color: white;
+    position: absolute;
+    z-index: 1111111111111;
+  
+   
    
     
 }
-.arrows .intro-arrow {
-    color: white;
-    font-size: 2rem;
-    transition: all .5s;
-    position: relative;
-    background-color: white;
-    z-index: 555555555555;
-    
-}
-.arrows hr {
-    border: 1px solid white;
 
-    opacity: 1;
-    
+.arrows .left, .right {
+    transition: all .5s;
+    height: 50%;
+  
 }
-.intro-arrow .left:hover   {
-     color: #f25454 !important;
+
+
+.arrows .left:hover   {
+     background-color: white;
+     color: #f25454;
      
  }
- .intro-arrow .right:hover{
+
+ .arrows .right:hover{
+     background-color: white;
      color: #f25454;
  }
+ 
+}
  
 
 /*about*/
@@ -260,6 +206,16 @@ opacity: 1;
     height: 5px;
 
 ;}
+.bar {
+    animation: color 1s forwards  none forwards fill-mode;
+    transition: all 1s;
+}
+@keyframes color {
+    0%{width: 0;}
+    100%{
+        width: 100%;
+    }
+}
 
 
 /*team*/
